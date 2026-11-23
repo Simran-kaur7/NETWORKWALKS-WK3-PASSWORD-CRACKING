@@ -1,7 +1,7 @@
 # 🔐 Networkwalks Cybersecurity Program — Week 3: Password Cracking
 
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
-![Tasks](https://img.shields.io/badge/Tasks-2%2F3%20Complete-blue)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![Tasks](https://img.shields.io/badge/Tasks-3%2F3%20Complete-brightgreen)
 ![Program](https://img.shields.io/badge/Networkwalks-Cybersecurity%20Training-red)
 
 **Student:** Simranjit Kaur (Simran)
@@ -32,11 +32,11 @@ This week covers that exact workflow through three different approaches:
 |---|------|------------|--------|
 | 1 | **[JTR + Johnny](./task1-jtr-johnny)** — cracked 3 locked PDFs | John the Ripper, Johnny GUI | ✅ Complete |
 | 2 | **[Networkwalks Web Tools](./task2-networkwalks-tools)** — cracked 1 locked PDF | Hash Calculator, Password Cracker | ✅ Complete |
-| 3 | **AI-Assisted Cracking** | Hexstrike-AI MCP, JTR, Claude Desktop (Kali) | 🔜 Coming soon |
+| 3 | **[AI-Assisted Cracking](./task3-ai-hexstrike-mcp)** — cracked 1 locked PDF via natural-language prompts | Hexstrike-AI MCP, JTR, Claude Desktop (Kali) | ✅ Complete |
 
 ---
 
-## 🚩 Flags Captured So Far
+## 🚩 Flags & Passwords Captured
 
 | Task | PDF | Password Found | Flag |
 |---|---|---|---|
@@ -44,6 +44,7 @@ This week covers that exact workflow through three different approaches:
 | 1 | My Locked PDF2.pdf | `password1` | `nw{networkwalks_persistence_jtr_270521}` |
 | 1 | My Locked PDF3.pdf | `1qaz2wsx` | `nw{networkwalks_flag_260821_1}` |
 | 2 | My Locked PDF1 (WK3-PM2).pdf | `password1` | `nw{networkwalks_flag1_jtr_270521_1}` |
+| 3 | My Locked PDF1.pdf (via AI/MCP) | `good-luck` | — |
 
 ---
 
@@ -55,22 +56,25 @@ networkwalks-week3-password-cracking/
 ├── task1-jtr-johnny/
 │   ├── README.md                  ← step-by-step walkthrough with screenshots
 │   └── 01.png ... 15.png
-└── task2-networkwalks-tools/
+├── task2-networkwalks-tools/
+│   ├── README.md                  ← step-by-step walkthrough with screenshots
+│   └── 01.png ... 03.png
+└── task3-ai-hexstrike-mcp/
     ├── README.md                  ← step-by-step walkthrough with screenshots
-    └── 01.png ... 03.png
+    └── 01.png ... 10.png
 ```
 
 ---
 
 ## 🛠️ Tech Stack
 
-`John the Ripper` · `Johnny GUI` · `pdf2john / hashcat hash format` · `Networkwalks Hash Calculator` · `Networkwalks Password Cracker` · `Kali Linux`
+`John the Ripper` · `Johnny GUI` · `pdf2john / hashcat hash format` · `Networkwalks Hash Calculator` · `Networkwalks Password Cracker` · `Hexstrike-AI MCP` · `Claude Desktop` · `Kali Linux`
 
 ---
 
 ## 🔑 Key Takeaway
 
-Encryption is reversible with the right key; **hashing is one-way**. Cracking tools don't "decrypt" a password — they extract its hash and guess-and-check against it. That's why a weak password like `password1` falls in under a second, while a long, random, unique password can resist this kind of attack for years.
+Encryption is reversible with the right key; **hashing is one-way**. Cracking tools don't "decrypt" a password — they extract its hash and guess-and-check against it. That's why a weak password like `password1` falls in under a second, while a long, random, unique password can resist this kind of attack for years. Task 3 also showed that the same workflow can be driven conversationally through an AI agent connected to real security tools via MCP — the underlying cryptography doesn't change, just the interface.
 
 ---
 
